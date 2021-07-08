@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/ChimeraMain/static/css/main.c605a8c9.chunk.css",
+    "main.js": "/ChimeraMain/static/js/main.51feba2b.chunk.js",
+    "main.js.map": "/ChimeraMain/static/js/main.51feba2b.chunk.js.map",
+    "runtime-main.js": "/ChimeraMain/static/js/runtime-main.33bd4cfd.js",
+    "runtime-main.js.map": "/ChimeraMain/static/js/runtime-main.33bd4cfd.js.map",
+    "static/css/2.7ff6b0f0.chunk.css": "/ChimeraMain/static/css/2.7ff6b0f0.chunk.css",
+    "static/js/2.fbe1d75c.chunk.js": "/ChimeraMain/static/js/2.fbe1d75c.chunk.js",
+    "static/js/2.fbe1d75c.chunk.js.map": "/ChimeraMain/static/js/2.fbe1d75c.chunk.js.map",
+    "index.html": "/ChimeraMain/index.html",
+    "precache-manifest.3ca4f701b9ae79f33a1a6f2a70ecc1d0.js": "/ChimeraMain/precache-manifest.3ca4f701b9ae79f33a1a6f2a70ecc1d0.js",
+    "service-worker.js": "/ChimeraMain/service-worker.js",
+    "static/css/2.7ff6b0f0.chunk.css.map": "/ChimeraMain/static/css/2.7ff6b0f0.chunk.css.map",
+    "static/css/main.c605a8c9.chunk.css.map": "/ChimeraMain/static/css/main.c605a8c9.chunk.css.map",
+    "static/js/2.fbe1d75c.chunk.js.LICENSE.txt": "/ChimeraMain/static/js/2.fbe1d75c.chunk.js.LICENSE.txt",
+    "static/media/Spinnin.gif": "/ChimeraMain/static/media/Spinnin.e8b82bda.gif",
+    "static/media/UploadIcon.svg": "/ChimeraMain/static/media/UploadIcon.1cedb6e9.svg",
+    "static/media/image1.png": "/ChimeraMain/static/media/image1.36a555e8.png",
+    "static/media/image2.png": "/ChimeraMain/static/media/image2.e40ded6d.png",
+    "static/media/nike.jpg": "/ChimeraMain/static/media/nike.cad39684.jpg",
+    "static/media/styles.css": "/ChimeraMain/static/media/revicons.2feb69cc.eot"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.33bd4cfd.js",
+    "static/css/2.7ff6b0f0.chunk.css",
+    "static/js/2.fbe1d75c.chunk.js",
+    "static/css/main.c605a8c9.chunk.css",
+    "static/js/main.51feba2b.chunk.js"
+  ]
+}

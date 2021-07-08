@@ -1,0 +1,22 @@
+/* .fileContainer .deleteImage {
+  font-size: 15px;
+  background-color: red;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+}
+.deleteImage {
+  display: none;
+} */
+.drop {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: white !important;
+  color: grey;
+  border-style: hidden !important;
+}
+.drop p {
+  margin-bottom: 50px;
+  margin-top: 10px;
+}

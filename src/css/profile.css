@@ -1,0 +1,33 @@
+.MuiInput-underline:after {
+  border-bottom: black !important;
+}
+.MuiFormLabel-root.Mui-focused {
+  color: black !important;
+}
+
+.MuiGrid-root img {
+  border-radius: 50% !important;
+  height: 70px;
+  margin-left: 30px;
+}
+.avatar .bg-white {
+  background-color: white !important;
+  border: none;
+  box-sizing: unset !important;
+  min-height: unset !important;
+  min-width: none !important;
+  padding: 0;
+}
+
+/* @media only screen and (max-width: 600px) {
+  .avatar {
+    position: absolute;
+    top: 10;
+    margin-top: 100px !important;
+    margin-bottom: 100px;
+  }
+  .check {
+    position: absolute;
+    : 100px;
+  }
+} */

@@ -1,0 +1,13 @@
+.MuiButtonBase-root:hover {
+  color: black !important;
+}
+.MuiAppBar-colorPrimary {
+  background-color: white !important;
+  color: black !important;
+}
+.PrivateTabIndicator-colorSecondary-4 {
+  background-color: black !important;
+}
+.MuiPaper-elevation4 {
+  box-shadow: none !important;
+}

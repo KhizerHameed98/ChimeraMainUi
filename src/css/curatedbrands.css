@@ -1,0 +1,19 @@
+.curatedCarousel .carousel-control-prev {
+  display: none !important;
+}
+.curatedCarousel .carousel-control-next {
+  display: none !important;
+}
+.curatedCarousel .carousel-indicators {
+  display: none !important;
+}
+.CarouselAnimation {
+  filter: gray; 
+  -webkit-filter: grayscale(0); 
+  -webkit-transition: all 0.8s ease-in-out;
+}
+.CarouselAnimation:hover {
+  filter: none;
+  -webkit-filter: grayscale(1);
+  -webkit-transform: scale(1.01);
+}
