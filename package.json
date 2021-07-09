@@ -1,5 +1,4 @@
 {
-  
   "name": "simple-light-react",
   "version": "0.1.0",
   "private": true,
@@ -28,7 +27,6 @@
     "react-content-loader": "^6.0.3",
     "react-dom": "^16.13.1",
     "react-dropdown": "^1.9.2",
-   
     "react-loading": "^2.0.3",
     "react-multi-carousel": "^2.6.2",
     "react-player": "^2.9.0",
@@ -48,7 +46,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "PORT=5000 craco start",
+    "start": "craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject"
