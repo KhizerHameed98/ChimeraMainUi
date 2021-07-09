@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Switch,
   Route,
@@ -35,6 +35,7 @@ let accounts;
 function App() {
   const location = useLocation();
   let history = useHistory();
+  const [path, setPath] = useState(location.pathname)
 
   useEffect(() => {
     AOS.init({
@@ -125,7 +126,7 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/discover">
+            <Route path={`${path}/discover`}>
               <Discover />
             </Route>
             <Route path="/market">
