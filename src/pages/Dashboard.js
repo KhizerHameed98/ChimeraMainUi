@@ -187,9 +187,9 @@ function Dashboard() {
                               alt="img"
                               className="rounded shadow-2xl ml-3 mt-4 mb-4"
                             />
-                            <span className="font-bold font-Lobster text-xl">
+                            <p className="font-bold font-Lobster text-xl">
                               Digital
-                            </span>
+                            </p>
                           </button>
                         </a>
                         {/* <a disabled href="/create-physicalart"> */}
@@ -211,15 +211,16 @@ function Dashboard() {
                             className="rounded shadow-2xl ml-3 mt-4 mb-4"
                             alt="img"
                           />
-                          <span className="font-bold font-Lobster text-xl">
-                            Physical
-                          </span>
-                          <p
-                            style={{ color: "green" }}
-                            className="font-bold font-Lobster text-base"
-                          >
-                            Coming Soon
+                          <p className="font-bold font-Lobster text-xl">
+                            <span> Physical</span>
+                            <p
+                              style={{ color: "green" }}
+                              className="font-bold font-Lobster text-base"
+                            >
+                              Coming Soon
+                            </p>
                           </p>
+                          <br />
                         </button>
                         {/* </a> */}
                       </div>
