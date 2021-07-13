@@ -1,5 +1,8 @@
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  purge: {
+    preserveHtmlElements: false,
+    content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  },
 
   theme: {
     extend: {
@@ -55,7 +58,7 @@ module.exports = {
         outline: "0 0 0 3px rgba(66, 153, 225, 0.5)",
         none: "none",
       },
-      
+
       spacing: {
         "9/16": "56.25%",
         "3/4": "75%",
