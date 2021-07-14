@@ -488,11 +488,11 @@ function MainCollection(props) {
                                         ) : (
                                           <>
                                             <div
-                                              className=" col-start-1 col-span-5sm:mb-0 lg:mb-2"
+                                              className=" col-start-1 col-span-5 sm:mb-0 lg:mb-2"
                                               style={{ paddingBottom: "5px" }}
                                             >
-                                              <h1 className="text-base mb-4 mt-2 text-green-100">
-                                                <span>Coming Soon</span>
+                                              <h1 className="text-base mt-3 text-green-100">
+                                                <span>coming soon</span>
                                               </h1>
                                             </div>
                                           </>

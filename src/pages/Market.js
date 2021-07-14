@@ -14,7 +14,7 @@ function Market() {
             {/* Top area: Blocks */}
             <div className=" gridsm:grid-cols-12 gap-8 py-20 md:py-12">
               <h1
-                className="font-extrabold text-6xl text-black"
+                className="font-extrabold text-5xl text-black"
                 data-aos="zoom-y-out"
               >
                 Market

@@ -125,6 +125,7 @@ function MainMarket() {
             )
             .then((res) => {
               let d = res.data;
+              console.log(d);
               let USD = d.USD * etherValue;
               USDTValue.push(financial(USD));
             });
@@ -138,7 +139,6 @@ function MainMarket() {
             .currentBidDetailsOfToken(config.Chimera, nfts)
             .call();
           const eth = Web3.utils.fromWei(bid[0], "ether");
-
           await axios
             .get(
               "https://min-api.cryptocompare.com/data/price?fsym=BNB&tsyms=USD"
@@ -146,6 +146,7 @@ function MainMarket() {
             .then((res) => {
               let d = res.data;
               let USD = d.USD * eth;
+
               USDTValueBid.push(financial(USD));
             });
           bidding.push(eth);

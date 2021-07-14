@@ -45,11 +45,11 @@ function Header() {
       >
         <Navbar expand="lg">
           <Navbar.Brand href="/">
-            <img src={logoChimera} style={{ width: 130 }} />
+            <img src={logoChimera} style={{ width: 130, marginTop: "2px" }} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
+            <Nav className="ml-auto mt-3">
               <Nav.Link href="/discover">Discover</Nav.Link>
               <Nav.Link href="/curated-brands">Curated Brands</Nav.Link>
 
@@ -59,7 +59,7 @@ function Header() {
                 <>
                   <Dropdown id="check">
                     <Dropdown.Toggle id="dropdown-basic">
-                      <div className=" md:px-0 lg:px-0 flex flex-row ">
+                      <div className=" md:px-0 lg:px-0 flex flex-row -mt-2 ">
                         <div>
                           {" "}
                           {/* <Icons.UserCircle

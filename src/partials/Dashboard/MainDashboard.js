@@ -326,7 +326,7 @@ export default function MainDashboard() {
 
   return (
     <div className={classes.root} className="mt-40">
-      <h3>Offers</h3>
+      <h3 className="text-3xl">Offers</h3>
       <AppBar position="static" className="mt-5">
         <Tabs
           variant="fullWidth"

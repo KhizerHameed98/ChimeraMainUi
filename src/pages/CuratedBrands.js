@@ -13,7 +13,7 @@ function CuratedBrands() {
           <div className="max-w-8xl  text-center mt-32 mx-auto px-4 sm:px-6">
             {/* Top area: Blocks */}
             <div className=" gridsm:grid-cols-12 gap-8 py-20 md:py-12">
-              <h1 className="font-extrabold text-black" data-aos="zoom-y-out">
+              <h1 className="font-extrabold text-black text-5xl" data-aos="zoom-y-out">
                 CURATED BRANDS
               </h1>
             </div>

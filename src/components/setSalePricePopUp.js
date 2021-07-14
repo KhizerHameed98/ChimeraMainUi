@@ -68,7 +68,7 @@ function DialoguePopUp(props) {
   return (
     <>
       <button
-        className="btn btn-primary"
+        className="btn btn-primary -mt-2 px-2 "
         onClick={handleClickOpen}
         style={{ fontSize: "12px" }}
       >

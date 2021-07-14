@@ -12,7 +12,7 @@ function Activity() {
           <div className="max-w-6xl  text-center mt-32 mx-auto px-4 sm:px-6">
             {/* Top area: Blocks */}
             <div className=" gridsm:grid-cols-12 gap-6 py-20 md:py-12">
-              <h1 className="font-extrabold text-black" data-aos="zoom-y-out">
+              <h1 className="font-extrabold text-5xl text-black" data-aos="zoom-y-out">
                 Activity
               </h1>
             </div>

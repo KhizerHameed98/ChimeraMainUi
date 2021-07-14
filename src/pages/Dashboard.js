@@ -165,10 +165,10 @@ function Dashboard() {
                       className="text-center"
                       style={{ paddingBottom: "50px" }}
                     >
-                      <div className="px-5">
+                      <div className="px-12">
                         <a
                           href="/create-digitalart"
-                          className="md:mr-5 lg:mr-5  xl:mr-5 sm:mr-0"
+                          className="md:mr-5 lg:mr-5  xl:mr-5 sm:mr-0 text-decoration-none hover:text-black-100"
                         >
                           <button
                             className="btn btn-primary text-center"
@@ -181,15 +181,26 @@ function Dashboard() {
                               borderColor: "#D8D8D8",
                             }}
                           >
-                            <img
-                              src="https://rarible.com/static/2a78e39400f51f1dbeba13832f421092.png"
-                              width="150px"
-                              alt="img"
-                              className="rounded shadow-2xl ml-3 mt-4 mb-4"
-                            />
-                            <p className="font-bold font-Lobster text-xl">
+                            {/* <span className="font-bold font-Lobster text-xl">
                               Digital
-                            </p>
+                            </span> */}
+                            <div class="space-y-4 ...">
+                              <span class="block ...">
+                                <img
+                                  src="https://rarible.com/static/2a78e39400f51f1dbeba13832f421092.png"
+                                  width="150px"
+                                  alt="img"
+                                  className="rounded shadow-2xl  mt-4 mb-4"
+                                />
+                              </span>
+                              <span class="block font-bold font-Lobster text-xl">
+                                Digital
+                              </span>
+                            </div>
+
+                            {/* <p className="font-bold font-Lobster text-xl">
+                              Digital
+                            </p> */}
                           </button>
                         </a>
                         {/* <a disabled href="/create-physicalart"> */}
@@ -205,22 +216,25 @@ function Dashboard() {
                             borderColor: "#D8D8D8",
                           }}
                         >
-                          <img
-                            src="https://rarible.com/static/48dc30c106da96755b60ead8627c8888.png"
-                            width="155px"
-                            className="rounded shadow-2xl ml-3 mt-4 mb-4"
-                            alt="img"
-                          />
-                          <p className="font-bold font-Lobster text-xl">
-                            <span> Physical</span>
-                            <p
+                          <div class="space-y-4 ...">
+                            <span class="block ...">
+                              <img
+                                src="https://rarible.com/static/48dc30c106da96755b60ead8627c8888.png"
+                                width="155px"
+                                className="rounded shadow-2xl mt-4 mb-4"
+                                alt="img"
+                              />
+                            </span>
+                            <span class="block font-bold font-Lobster text-xl">
+                              Physical
+                            </span>
+                            <span
+                              class="block font-bold font-Lobster text-base"
                               style={{ color: "green" }}
-                              className="font-bold font-Lobster text-base"
                             >
                               Coming Soon
-                            </p>
-                          </p>
-                          <br />
+                            </span>
+                          </div>
                         </button>
                         {/* </a> */}
                       </div>

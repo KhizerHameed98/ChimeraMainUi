@@ -4,8 +4,8 @@ import ReactLoading from "react-loading";
 const Loader = () => {
   return (
     <div>
-      <div className="max-w-xs mx-auto">
-        <div className="text-center mt-3 ml-32">
+      <div className="max-w-xs mx-auto ">
+        <div className="text-center mt-3 ml-20">
           <ReactLoading
             className="text-center"
             type={"bubbles"}

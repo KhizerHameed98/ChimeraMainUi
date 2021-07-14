@@ -13,12 +13,11 @@ function Discover() {
           <div className="max-w-8xl  text-center mt-32 mx-auto px-4 sm:px-6">
             {/* Top area: Blocks */}
             <div className=" gridsm:grid-cols-12 gap-8 py-20 md:py-12">
-              <h1 className="font-extrabold text-black">Dicover</h1>
+              <h1 className="font-extrabold text-5xl text-black">Dicover</h1>
             </div>
           </div>
         </div>
         <div>
-         
           <DiscoverMultiCarousel />
         </div>
 

@@ -35,7 +35,7 @@ let accounts;
 function App() {
   const location = useLocation();
   let history = useHistory();
-  const [path, setPath] = useState(location.pathname)
+  const [path, setPath] = useState(location.pathname);
 
   useEffect(() => {
     AOS.init({
@@ -126,7 +126,7 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path={`${path}/discover`}>
+            <Route path={`/discover`}>
               <Discover />
             </Route>
             <Route path="/market">
