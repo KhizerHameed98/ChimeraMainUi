@@ -84,18 +84,33 @@ function MainUserDetail({ id }) {
                       </div>
                       {localStorage.getItem("id") === id ? (
                         <>
-                          <a href="/profile">
-                            <button
-                              className="btn btn-primary mt-3 px-4  "
+                          <a
+                            href="/profile"
+                            className="btn btn-primary mt-3 px-4 "
+                            style={{
+                              backgroundColor: "#212121",
+                              fontSize: "12px",
+                              borderColor: "#212121",
+                            }}
+                          >
+                            {" "}
+                            Edit Profile
+                          </a>
+                          <div>
+                            <a
+                              href="https://forms.gle/TdMcYcE3LBA8Wn349?_imcp=1"
+                              className="btn btn-primary mt-3"
                               style={{
                                 backgroundColor: "#212121",
                                 fontSize: "12px",
+                                paddingRight: "41px",
+                                paddingLeft: "42px",
                                 borderColor: "#212121",
                               }}
                             >
-                              Edit Profile
-                            </button>
-                          </a>
+                              KYC
+                            </a>
+                          </div>
                         </>
                       ) : (
                         <>

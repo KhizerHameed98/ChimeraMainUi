@@ -145,7 +145,7 @@ function Dashboard() {
                               >
                                 MAKE AN ART{" "}
                                 <i className="fas text-lg ml-2 fa-plus-circle"></i>
-                              </button>{" "}
+                              </button>
                             </>
                           )}
                         </>
