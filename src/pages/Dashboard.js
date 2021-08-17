@@ -187,7 +187,7 @@ function Dashboard() {
                             <div class="space-y-4 ...">
                               <span class="block ...">
                                 <img
-                                  src="https://rarible.com/static/2a78e39400f51f1dbeba13832f421092.png"
+                                  src="https://rarible.com/aeab66c41451d080f78d.png"
                                   width="150px"
                                   alt="img"
                                   className="rounded shadow-2xl  mt-4 mb-4"
@@ -219,7 +219,7 @@ function Dashboard() {
                           <div class="space-y-4 ...">
                             <span class="block ...">
                               <img
-                                src="https://rarible.com/static/48dc30c106da96755b60ead8627c8888.png"
+                                src="https://rarible.com/36bb69094bddb424314b.png"
                                 width="155px"
                                 className="rounded shadow-2xl mt-4 mb-4"
                                 alt="img"
