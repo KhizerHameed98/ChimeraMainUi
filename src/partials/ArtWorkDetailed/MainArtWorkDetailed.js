@@ -219,25 +219,29 @@ function MainArtWorkDetailed({ id }) {
                   {localStorage.getItem("role") === "collector" &&
                   OwnerData.address !==
                     localStorage.getItem("walletAddress") ? (
-                    <>
-                      <>
-                        <div className="mt-5">
-                          <span
-                            style={{
-                              color: "#a5a5a5",
-                              fontSize: "12px",
-                              fontWeight: "bold",
-                            }}
-                          >
-                            LIST PRICE:
-                          </span>
-                          <p className="text-5xl font-extrabold">
-                            {NFTPrice}
-                            <span className="text-xs font-extrabold">BNB</span>
-                          </p>
-                        </div>
-                        {/*BUY*/}
-                        {/* <BuyPopUp
+                        <>
+                          {/*commit this check */}
+                      {isApprovalForAll ? (
+                        <>
+                          <div className="mt-5">
+                            <span
+                              style={{
+                                color: "#a5a5a5",
+                                fontSize: "12px",
+                                fontWeight: "bold",
+                              }}
+                            >
+                              LIST PRICE:
+                            </span>
+                            <p className="text-5xl font-extrabold">
+                              {NFTPrice}
+                              <span className="text-xs font-extrabold">
+                                BNB
+                              </span>
+                            </p>
+                          </div>
+                          {/*BUY*/}
+                          {/* <BuyPopUp
                             id={id}
                             nftData={NFTData}
                             nftPrice={NFTPrice}
@@ -246,16 +250,28 @@ function MainArtWorkDetailed({ id }) {
                             OwnerData={OwnerData}
                           /> */}
 
-                        <BidPopUp
-                          key={1}
-                          id={id}
-                          nftData={NFTData}
-                          nftPrice={NFTPrice}
-                          nftPriceFeeIncluded={TotalBuyPrice}
-                          marketPlaceSettingsFee={maketPlaceFee}
-                          OwnerData={OwnerData}
-                        />
-                      </>
+                          <BidPopUp
+                            key={1}
+                            id={id}
+                            nftData={NFTData}
+                            nftPrice={NFTPrice}
+                            nftPriceFeeIncluded={TotalBuyPrice}
+                            marketPlaceSettingsFee={maketPlaceFee}
+                            OwnerData={OwnerData}
+                          />
+                        </>
+                      ) : (
+                        <>
+                          <div className="text-center mb-20">
+                            <button
+                              onClick={SetApprovalForAll}
+                              className="btn text-center make-offer-btn btn-primary mt-4 hover: bg-gray-1000"
+                            >
+                              Set Approval
+                            </button>
+                          </div>
+                        </>
+                      )}
                     </>
                   ) : null}
                 </>

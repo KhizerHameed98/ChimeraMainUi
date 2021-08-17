@@ -116,11 +116,13 @@ function MainCollection(props) {
     let biddingOwner = [];
     let videoOrNot = [];
     try {
+      console.log(1);
       let totalSupply = await chimera.methods.totalSupply().call();
       for (let i = 0; i < totalSupply; i++) {
         let nfts = await chimera.methods.tokenByIndex(i).call();
-
+        console.log(2);
         let owner = await chimera.methods.ownerOf(nfts).call();
+        console.log(3);
         if (owner === accounts[0]) {
           tokenId.push(nfts);
           let res = await axios.get(`${config.host}/file/${nfts}`);
@@ -146,12 +148,13 @@ function MainCollection(props) {
           let confirmed = await SMAV2.methods
             .isTokenConfirmedByAdmin(nfts)
             .call();
-
+          console.log("nfts----->>>", nfts);
           isApprovedByAdmin.push(confirmed);
 
           let price = await SMAV2.methods
             .tokenPrice(config.Chimera, nfts)
             .call();
+          console.log("price------>>>", price);
           const etherValue = Web3.utils.fromWei(price, "ether");
           await axios
             .get(
@@ -171,6 +174,7 @@ function MainCollection(props) {
           let bid = await SMAV2.methods
             .currentBidDetailsOfToken(config.Chimera, nfts)
             .call();
+          console.log(6);
 
           const eth = Web3.utils.fromWei(bid[0], "ether");
 
