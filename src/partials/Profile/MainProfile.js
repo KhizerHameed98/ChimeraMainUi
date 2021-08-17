@@ -235,7 +235,7 @@ function MainProfile(props) {
                     onChange={onChangeImageFile}
                     filesLimit={1}
                     maxFileSize={5000000}
-                    dropzoneClass="bg-white"
+                    dropzoneClass="dropzone-profile"
                   />
                 </div>
               </div>
