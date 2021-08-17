@@ -206,7 +206,7 @@ function MainUserDetail({ id }) {
                           </>
                         ) : null}
                         <p className="mt-2" style={{ fontSize: "14px" }}>
-                          <a className="text-blue-400" href="#">
+                          <a className="text-blue-400" href={userData.website}>
                             {userData.website}
                           </a>
                         </p>

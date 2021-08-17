@@ -6,6 +6,7 @@ const config = {
   SRR: "0x045Ab989703B957d206258881Ef7BA98C34A37C5",
   role: "0x544f4b454e5f434f4c4c4543544f525f524f4c45000000000000000000000000",
   networkId: 97,
-  host: "http://18.116.89.176:8080",
+  // host: "http://localhost:8080",
+  host: "https://chimera-bk.herokuapp.com",
 };
 export default config;

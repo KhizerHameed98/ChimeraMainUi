@@ -35,7 +35,7 @@ function CreateDigitalArt() {
 
   const classes = useStyles();
   const size = 100242880;
-
+  
   const [imageFile, setImageFile] = useState(null);
   const [imgFormat, setImgFormat] = useState(false);
   const [imgSrc, setImgSrc] = useState(null);

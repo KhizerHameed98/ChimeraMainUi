@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams, Link } from "react-router-dom";
-import ContentLoader from "react-content-loader";
+import Avatar from "@material-ui/core/Avatar";
+import { makeStyles } from "@material-ui/core/styles";
 import ReadMoreReact from "read-more-react";
 import "../../css/check.css";
 import * as Icons from "phosphor-react";
@@ -15,8 +16,16 @@ const chimeraContract = require("../../contracts/Chimera.json");
 const SMAV2Contract = require("../../contracts/ChimeraMarketAuctionV2.json");
 const MarketPlaceSetting = require("../../contracts/MarketplaceSettings.json");
 let SMAV2, web3, accounts, chimera, MP;
-
+const useStyles = makeStyles((theme) => ({
+  root: {
+    "& > *": {
+      margin: theme.spacing(0),
+    },
+  },
+}));
 function MainAcceptBidDetailed({ id }) {
+  const classes = useStyles();
+
   let history = useHistory();
 
   const [isVideo, setIsVideo] = useState(false);
@@ -309,27 +318,33 @@ function MainAcceptBidDetailed({ id }) {
                 {/*First Divider */}
                 <div className="flex flex-col">
                   <div className="mb-3">
-                  <a
+                    <a
                       href={`/user-detail/${ArtistData._id}`}
                       className="text-sm mt-1 text-decoration-none text-black-100 hover:text-black-100"
                     >
-                    <div class="space-x-20   sm:space-x-5 ">
-                      <div class="inline-block ...">
-                        {" "}
-                        <img
-                          class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
-                          style={{ marginTop: "-30px" }}
-                          src={ArtistData.avatar}
-                          alt=""
-                        />
+                      <div class="space-x-20   sm:space-x-5 ">
+                        <div class="inline-block ...">
+                          {" "}
+                          <Avatar
+                            id="nav-avatar"
+                            style={{
+                              marginLeft: "-1px",
+                              marginTop: "1px",
+                              width: "42px",
+                              height: "42px",
+                            }}
+                            alt="Remy Sharp"
+                            src={ArtistData.avatar}
+                            className={classes.large}
+                          />
+                        </div>
+                        <div class="inline-block">
+                          <span className="text-sm">@{ArtistData.name}</span>
+                          <p className="text-xs text-gray-500 font-bold">
+                            Artist
+                          </p>
+                        </div>
                       </div>
-                      <div class="inline-block">
-                        <span className="text-sm">@{ArtistData.name}</span>
-                        <p className="text-xs text-gray-500 font-bold">
-                          Artist
-                        </p>
-                      </div>
-                    </div>
                     </a>
                   </div>
                   {/*Second Line */}
@@ -341,11 +356,15 @@ function MainAcceptBidDetailed({ id }) {
                       <div class="space-x-20   sm:space-x-5 ">
                         <div class="inline-block ...">
                           {" "}
-                          <img
-                            class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
-                            style={{ marginTop: "-30px" }}
+                          <Avatar
+                            id="nav-avatar"
+                            style={{
+                              marginLeft: "-1px",
+                              width: "42px",
+                              height: "42px",
+                            }}
+                            alt="Remy Sharp"
                             src={OwnerData.avatar}
-                            alt=""
                           />
                         </div>
                         <div class="inline-block">
