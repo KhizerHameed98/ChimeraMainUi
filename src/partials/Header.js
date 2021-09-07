@@ -51,7 +51,7 @@ function Header() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto mt-2">
               <Nav.Link href="/discover">Discover</Nav.Link>
-              <Nav.Link href="/curated-brands">Curated Brands</Nav.Link>
+              {/* <Nav.Link href="/curated-brands">Curated Brands</Nav.Link> */}
 
               <Nav.Link href="/market">Market</Nav.Link>
               <Nav.Link href="/activity">Activity</Nav.Link>

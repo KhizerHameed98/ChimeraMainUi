@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 function HeroHome() {
   return (
     <section className="relative mb-5">
@@ -30,30 +30,45 @@ function HeroHome() {
           <div className="row">
             <div className="col-md-6"></div>
             <div className="col-md-6 text-center">
-              <button
-                data-aos="zoom-y-out"
-                className="btn btn-primary"
-                style={{
-                  width: 250,
-                  height: 45,
-                  backgroundColor: "black",
-                  borderColor: "black",
-                }}
-              >
-                <strong style={{ fontSize: "12px" }}>START COLLECTING</strong>
-              </button>
-              <a
-                data-aos="zoom-y-out"
-                href="#"
-                className="ml-3"
-                style={{
-                  color: "black",
-                  textDecoration: "none",
-                  borderBottom: "1px solid",
-                }}
-              >
-                Learn More
-              </a>
+              {localStorage.getItem("walletAddress") ? (
+                <>
+                  <Link to="/market">
+                    <button
+                      data-aos="zoom-y-out"
+                      className="btn btn-primary"
+                      style={{
+                        width: 250,
+                        height: 45,
+                        backgroundColor: "black",
+                        borderColor: "black",
+                      }}
+                    >
+                      <strong style={{ fontSize: "12px" }}>
+                        START COLLECTING
+                      </strong>
+                    </button>
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link to="/signin">
+                    <button
+                      data-aos="zoom-y-out"
+                      className="btn btn-primary"
+                      style={{
+                        width: 250,
+                        height: 45,
+                        backgroundColor: "black",
+                        borderColor: "black",
+                      }}
+                    >
+                      <strong style={{ fontSize: "12px" }}>
+                        START COLLECTING
+                      </strong>
+                    </button>
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>

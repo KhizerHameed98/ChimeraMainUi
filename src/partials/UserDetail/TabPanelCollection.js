@@ -92,25 +92,26 @@ export default function MainDashboard({
 
       for (let i = 0; i < totalSupply; i++) {
         let nftId = await chimera.methods.tokenByIndex(i).call();
+
         let owner = await chimera.methods.ownerOf(nftId).call();
+
         let creator = await chimera.methods.tokenCreator(nftId).call();
+
         //collection
         if (data.address === owner) {
           let price = await SMAV2.methods
             .tokenPrice(config.Chimera, nftId)
             .call();
-          if (price !== "0") {
-            collection++;
-            collectionTokenId.push(nftId);
-            let res = await axios.get(`${config.host}/file/${nftId}`);
-            let ext = res.data[0].extension.split(" ");
-            if (ext[0] === "video") {
-              videoCollection.push(true);
-            } else {
-              videoCollection.push(false);
-            }
-            collectionNftData.push(res.data[0]);
+          collection++;
+          collectionTokenId.push(nftId);
+          let res = await axios.get(`${config.host}/file/${nftId}`);
+          let ext = res.data[0].extension.split(" ");
+          if (ext[0] === "video") {
+            videoCollection.push(true);
+          } else {
+            videoCollection.push(false);
           }
+          collectionNftData.push(res.data[0]);
         }
         //creation
 
@@ -118,18 +119,17 @@ export default function MainDashboard({
           let price = await SMAV2.methods
             .tokenPrice(config.Chimera, nftId)
             .call();
-          if (price !== "0") {
-            creation++;
-            creationTokenId.push(nftId);
-            let res = await axios.get(`${config.host}/file/${nftId}`);
-            let ext = res.data[0].extension.split(" ");
-            if (ext[0] === "video") {
-              videoCreation.push(true);
-            } else {
-              videoCreation.push(false);
-            }
-            creationNftData.push(res.data[0]);
+
+          creation++;
+          creationTokenId.push(nftId);
+          let res = await axios.get(`${config.host}/file/${nftId}`);
+          let ext = res.data[0].extension.split(" ");
+          if (ext[0] === "video") {
+            videoCreation.push(true);
+          } else {
+            videoCreation.push(false);
           }
+          creationNftData.push(res.data[0]);
         }
       }
       Promise.all([

@@ -72,7 +72,7 @@ function DialoguePopUp(props) {
         onClick={handleClickOpen}
         style={{ fontSize: "12px" }}
       >
-        Set SalePrice
+        Set Sale Price
       </button>
       <Dialog
         open={open}

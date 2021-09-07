@@ -425,7 +425,7 @@ export default function MainDashboard() {
                                                     <span>
                                                       {TokenPrice[key]}
                                                     </span>
-                                                    Ξ(
+                                                    BNB(
                                                     <span>
                                                       ${USDValue[key]}
                                                     </span>
@@ -442,7 +442,7 @@ export default function MainDashboard() {
                                                       <span>
                                                         {BiddingPrice[key]}
                                                       </span>
-                                                      Ξ(
+                                                      BNB(
                                                       <span>
                                                         ${USDValueBid[key]}
                                                       </span>
@@ -652,7 +652,7 @@ export default function MainDashboard() {
                                                     <span>
                                                       {TokenPrice2[key]}
                                                     </span>
-                                                    Ξ(
+                                                    BNB(
                                                     <span>
                                                       ${TokenPriceUsd2[key]}
                                                     </span>
@@ -669,7 +669,7 @@ export default function MainDashboard() {
                                                       <span>
                                                         {BiddingPrice2[key]}
                                                       </span>
-                                                      Ξ(
+                                                      BNB(
                                                       <span>
                                                         ${BidPriceUsd2[key]}
                                                       </span>

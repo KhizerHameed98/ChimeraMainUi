@@ -138,7 +138,7 @@ function MainAcceptBidDetailed({ id }) {
     }
   }
   function financial(x) {
-    return Number.parseFloat(x).toFixed(0);
+    return Number.parseFloat(x).toFixed(1);
   }
 
   useEffect(() => {
@@ -253,7 +253,7 @@ function MainAcceptBidDetailed({ id }) {
                         <p className="text-5xl font-extrabold">
                           {BiddingPriceBNB}
                           <span className="text-xs font-extrabold">
-                            BNBΞ(${BiddingPrice.usdPrice})
+                            BNB (${BiddingPrice.usdPrice})
                           </span>
                         </p>
                         <p

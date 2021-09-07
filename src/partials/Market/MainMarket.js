@@ -208,7 +208,7 @@ function MainMarket() {
     }
   }
   function financial(x) {
-    return Number.parseFloat(x).toFixed(0);
+    return Number.parseFloat(x).toFixed(1);
   }
 
   useEffect(() => {
@@ -465,11 +465,13 @@ function MainMarket() {
                                         <>
                                           <>
                                             <div className="grid gap-6 sm:grid-cols-12 lg:grid-cols-12">
-                                              <div className=" col-start-1 col-span-5 sm:mb-0 lg:mb-2">
+                                              <div className=" col-start-1 col-span-6 sm:mb-0 lg:mb-2">
                                                 <h1 className="text-base text-green-100">
-                                                  <span>{TokenPrice[key]}</span>
-                                                  Ξ(
-                                                  <span>${USDValue[key]}</span>)
+                                                  <span>
+                                                    {TokenPrice[key]} BNB{" "}
+                                                  </span>
+                                                  (<span>${USDValue[key]}</span>
+                                                  )
                                                   <p className="text-xxs mt-2 text-green-200">
                                                     List price
                                                   </p>
@@ -478,12 +480,12 @@ function MainMarket() {
 
                                               {BiddingOrNot[key] ? (
                                                 <>
-                                                  <div className="col-start-6 col-span-7 mb-2">
+                                                  <div className="col-start-7 col-span-8 mb-2">
                                                     <h1 className="text-base text-green-100">
                                                       <span>
-                                                        {BiddingPrice[key]}
-                                                      </span>
-                                                      Ξ(
+                                                        {BiddingPrice[key]} BNB{" "}
+                                                      </span>{" "}
+                                                      (
                                                       <span>
                                                         ${USDValueBid[key]}
                                                       </span>

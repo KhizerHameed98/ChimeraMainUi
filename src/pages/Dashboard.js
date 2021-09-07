@@ -9,6 +9,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import config from "../config";
 import Loader from "../partials/Loader";
+import axios from "axios";
 const chimeraContract = require("../contracts/Chimera.json");
 
 let web3;
@@ -25,6 +26,8 @@ function Dashboard() {
   };
   const [loading, setLoading] = useState(false);
   const [WalletBalance, setWalletBalance] = useState("");
+  const [WalletBalanceUSDT, setWalletBalanceUSDT] = useState("");
+
   const [notApproved, setNotApproved] = useState(false);
   async function ApprovedOrNot() {
     setLoading(true);
@@ -57,7 +60,8 @@ function Dashboard() {
   useEffect(() => {
     ApprovedOrNot();
   }, []);
-  useEffect(() => {
+
+  useEffect(async () => {
     setLoading(true);
     web3 = new Web3(window.ethereum);
     window.ethereum.enable();
@@ -69,6 +73,17 @@ function Dashboard() {
           console.log(err);
         } else {
           const balance = web3.utils.fromWei(result, "ether");
+          let balanceUSDT;
+          axios
+            .get(
+              "https://min-api.cryptocompare.com/data/price?fsym=BNB&tsyms=USD"
+            )
+            .then((res) => {
+              let d = res.data;
+              let USD = d.USD * balance;
+
+              setWalletBalanceUSDT(financial(USD));
+            });
           setWalletBalance(financial(balance));
           console.log(financial(balance));
           setLoading(false);
@@ -77,7 +92,7 @@ function Dashboard() {
     );
   }, []);
   function financial(x) {
-    return Number.parseFloat(x).toFixed(3);
+    return Number.parseFloat(x).toFixed(2);
   }
   return (
     <>
@@ -102,14 +117,14 @@ function Dashboard() {
                       className="font-normal text-4xl sm:text-5xl "
                       data-aos="zoom-y-out"
                     >
-                      Ξ
+                      BNB
                     </div>
                     <div
                       className="text-base font-semibold
                       ml-3 mt-3"
                       data-aos="zoom-y-out"
                     >
-                      $20,790
+                      ${WalletBalanceUSDT}
                     </div>
                   </div>
                 </div>
@@ -293,7 +308,7 @@ function Dashboard() {
                         <span>TOTAL SALES VALUE</span>
                       </div>
                       <div className="mt-2 mb-4">
-                        <span className="text-3xl">0 ETH</span>
+                        <span className="text-3xl">0 BNB</span>
                       </div>
                     </div>
                     {/* 1st item */}
@@ -320,7 +335,7 @@ function Dashboard() {
                         <span>TOTAL COLLECTED VALUE</span>
                       </div>
                       <div className="mt-2 mb-4">
-                        <span className="text-3xl">0 ETH</span>
+                        <span className="text-3xl">0 BNB</span>
                       </div>
                     </div>
                   </div>

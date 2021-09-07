@@ -120,9 +120,7 @@ function MainCollection(props) {
       let totalSupply = await chimera.methods.totalSupply().call();
       for (let i = 0; i < totalSupply; i++) {
         let nfts = await chimera.methods.tokenByIndex(i).call();
-        console.log(2);
         let owner = await chimera.methods.ownerOf(nfts).call();
-        console.log(3);
         if (owner === accounts[0]) {
           tokenId.push(nfts);
           let res = await axios.get(`${config.host}/file/${nfts}`);
@@ -245,7 +243,7 @@ function MainCollection(props) {
     }
   }
   function financial(x) {
-    return Number.parseFloat(x).toFixed(0);
+    return Number.parseFloat(x).toFixed(1);
   }
 
   useEffect(() => {
@@ -414,12 +412,12 @@ function MainCollection(props) {
                                             {IsSalePrice[key] == true ? (
                                               <>
                                                 <div className="grid gap-6 sm:grid-cols-12 lg:grid-cols-12">
-                                                  <div className=" col-start-1 col-span-5 sm:mb-0 lg:mb-2">
+                                                  <div className=" col-start-1 col-span-6 sm:mb-0 lg:mb-2">
                                                     <h1 className="text-base text-green-100">
                                                       <span>
-                                                        {TokenPrice[key]}
+                                                        {TokenPrice[key]} BNB{" "}
                                                       </span>
-                                                      Ξ(
+                                                      (
                                                       <span>
                                                         ${USDValue[key]}
                                                       </span>
@@ -432,12 +430,13 @@ function MainCollection(props) {
 
                                                   {BiddingOrNot[key] ? (
                                                     <>
-                                                      <div className="col-start-6 col-span-7 mb-2">
+                                                      <div className="col-start-7 col-span-8 mb-2">
                                                         <h1 className="text-base text-green-100">
                                                           <span>
-                                                            {BiddingPrice[key]}
+                                                            {BiddingPrice[key]}{" "}
+                                                            BNB{" "}
                                                           </span>
-                                                          Ξ(
+                                                          (
                                                           <span>
                                                             ${USDValueBid[key]}
                                                           </span>
@@ -496,7 +495,9 @@ function MainCollection(props) {
                                               style={{ paddingBottom: "5px" }}
                                             >
                                               <h1 className="text-base mt-3 text-green-100">
-                                                <span>coming soon</span>
+                                                <span>
+                                                  waiting for approval
+                                                </span>
                                               </h1>
                                             </div>
                                           </>

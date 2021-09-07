@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function HomeCollectArt() {
   return (
     <>
@@ -56,19 +56,41 @@ function HomeCollectArt() {
         </div>
       </div>
       <div className="text-center">
-        <a
-          className="btn btn-primary "
-          style={{
-            fontSize: 13,
-            fontWeight: "bold",
-            width: 250,
-            padding: 10,
-            backgroundColor: "black",
-            borderColor: "black",
-          }}
-        >
-          START COLLECTING
-        </a>
+        {localStorage.getItem("walletAddress") ? (
+          <>
+            <Link to="/market">
+              <button
+                data-aos="zoom-y-out"
+                className="btn btn-primary"
+                style={{
+                  width: 250,
+                  height: 45,
+                  backgroundColor: "black",
+                  borderColor: "black",
+                }}
+              >
+                <strong style={{ fontSize: "12px" }}>START COLLECTING</strong>
+              </button>
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link to="/signin">
+              <button
+                data-aos="zoom-y-out"
+                className="btn btn-primary"
+                style={{
+                  width: 250,
+                  height: 45,
+                  backgroundColor: "black",
+                  borderColor: "black",
+                }}
+              >
+                <strong style={{ fontSize: "12px" }}>START COLLECTING</strong>
+              </button>
+            </Link>
+          </>
+        )}
       </div>
     </>
   );
